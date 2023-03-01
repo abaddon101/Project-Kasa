@@ -5,7 +5,7 @@ function HeaderComponent() {
   return (
     <header>
       <img src={logo} alt="logo"></img>
-      <nav>
+      <nav className="headerMenuNav">
         <Link to="/">Accueil</Link>
         <Link to="/about">A propos</Link>
       </nav>
