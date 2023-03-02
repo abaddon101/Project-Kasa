@@ -1,10 +1,11 @@
 import React from "react";
-import Banner from "../components/Banner";
-
+import BannerComponent from "../components/BannerComponent";
+import GalleryComponent from "../components/GalleryComponent";
 function Home() {
   return (
     <div>
-      <Banner />
+      <BannerComponent />
+      <GalleryComponent />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import exterior2 from "../assets/exterior2.png";
 import styles from "../pages/Home.scss";
 
-function Banner() {
+function BannerComponent() {
   return (
     <div>
       <section className="banner">
@@ -15,4 +15,4 @@ function Banner() {
   );
 }
 
-export default Banner;
+export default BannerComponent;
