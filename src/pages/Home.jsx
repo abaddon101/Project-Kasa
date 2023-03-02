@@ -4,8 +4,11 @@ import GalleryComponent from "../components/GalleryComponent";
 function Home() {
   return (
     <div>
+      
       <BannerComponent />
       <GalleryComponent />
+      
+      
     </div>
   );
 }

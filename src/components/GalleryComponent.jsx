@@ -1,12 +1,21 @@
-import styles from "../pages/Home.scss";
-
+import logements from "../data/logements.json";
+import { Link } from "react-router-dom";
 function GalleryComponent() {
   return (
-    <div>
-      <section className="gallery">
-        <article className="galleryArticle">Titre de la location</article>
-      </section>
-    </div>
+    <section className="gallery">
+      <ul className="listGalleryBlock">
+        {logements.map(({ cover, title, id }) => (
+          <li className="listGalleryChild" key={id}>
+            <Link className="linkArticle" to={`/Annonces/${id}`}>
+              <article className="galleryArticle">
+                <img className="imgGalleryArticle" src={cover} alt={title} />
+                <h5 className="titleGalleryArticle">{title}</h5>
+              </article>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
