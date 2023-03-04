@@ -1,5 +1,5 @@
 import styles from "../HeaderComponent/HeaderComponent.scss";
-import logo from "/Users/33638/Desktop/roussel_mathieu_11_022023/src/assets/logo.png";
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
 function HeaderComponent() {

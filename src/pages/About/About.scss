@@ -1,0 +1,39 @@
+.AboutPageContent {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.element {
+  list-style-type: none;
+  border: 1px solid #f6f6f6;
+  background-color: #f6f6f6;
+  color: #ff6060;
+  width: 90%;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+.element.open .textDropDown {
+  display: block;
+}
+
+.textDropDown {
+  display: none;
+}
+
+.titleDropdown {
+  display: flex;
+  margin: 0px 0px 0px 0px;
+
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: #f6f6f6;
+  background-color: #ff6060;
+  border-radius: 5px;
+  height: 30px;
+  //   .iconTitle {
+  //     font-size: 10px;
+  //   }
+}

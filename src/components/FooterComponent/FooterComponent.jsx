@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegCopyright } from "react-icons/fa";
 import styles from "./FooterComponent.scss";
-import logoFooter from "/Users/33638/Desktop/roussel_mathieu_11_022023/src/assets/logoFooter.png";
+import logoFooter from "../../assets/logoFooter.png";
 
 function FooterComponent() {
   return (

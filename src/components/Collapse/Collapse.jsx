@@ -1,7 +1,24 @@
-import styles from "../Collapse/Collapse.scss";
+import { useState } from "react";
+import { FaAngleDown } from "react-icons/fa";
 
-function Collapse() {
-  return <div>Collapse</div>;
+function Collapse(props) {
+  console.log(props);
+  const [openElement, setopenElement] = useState(false);
+  const toggle = () => {
+    setopenElement(!openElement);
+  };
+
+  return (
+    <li className={openElement ? "element open" : "element"}>
+      <h6 className="titleDropdown" onClick={toggle}>
+        {props.title}
+
+        <FaAngleDown className="iconTitle" />
+        {/* {openElement && <div className="clickIt">click moi</div>} */}
+      </h6>
+      <p className="textDropDown">{props.description}</p>
+    </li>
+  );
 }
 
 export default Collapse;
