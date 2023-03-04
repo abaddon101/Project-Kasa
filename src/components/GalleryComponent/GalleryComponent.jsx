@@ -1,4 +1,5 @@
-import logements from "../data/logements.json";
+import logements from "../../data/logements.json";
+import styles from "../GalleryComponent/GalleryComponent.scss"
 import { Link } from "react-router-dom";
 function GalleryComponent() {
   return (

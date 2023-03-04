@@ -1,5 +1,5 @@
-import exterior from "../assets/exterior.png";
-import styles from "../pages/Home.scss";
+import exterior from "/Users/33638/Desktop/roussel_mathieu_11_022023/src/assets/exterior.png";
+import styles from "../BannerComponentAboutPage/BannerComponentAboutPage.scss";
 
 function BannerComponentAboutPage() {
   return (
