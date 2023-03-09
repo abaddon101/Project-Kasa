@@ -9,12 +9,11 @@ function Collapse(props) {
   };
 
   return (
-    <li className={openElement ? "element open" : "element"}>
+    <li className={openElement ? "element open" : "element"} key={props}>
       <h6 className="titleDropdown" onClick={toggle}>
         {props.title}
 
         <FaAngleDown className="iconTitle" />
-        {/* {openElement && <div className="clickIt">click moi</div>} */}
       </h6>
       <p className="textDropDown">{props.description}</p>
     </li>
