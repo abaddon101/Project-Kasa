@@ -9,7 +9,7 @@ function Collapse(props) {
   };
 
   return (
-    <li className={openElement ? "element open" : "element"} key={props}>
+    <li className={openElement ? "element open" : "element"} >
       <h6 className="titleDropdown" onClick={toggle}>
         {props.title}
 

@@ -1,17 +1,28 @@
 import logements from "../../data/logements.json";
 import { useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import SlideShow from "../../components/Slideshow/Slideshow";
+//  import { redirect } from "react-router-dom";
 function Logement(props) {
-  /* Récupère la bonne fiche */
-  const id = useParams();
+  /* Get the id */
+  const idJsonFIle = useParams();
 
-  console.log(id);
-  const ficheLogement = logements.find((logement) => logement.id === id.id);
+  console.log(idJsonFIle);
+  // make a find on the logement (jsonFile) // the (logement) param give the list of all the logements
+  // the logement.id allow to send on the first id array of ths json file, but its necessary to allow to all
+  // the file with : idJsonFIle.id
+  const ficheLogement = logements.find(
+    (logement) => logement.id === idJsonFIle.id
+  );
+
+  // if (ficheLogement === undefined) {
+  //   return <Redirect to="/error" />;
+  // }
   console.log(ficheLogement);
 
   return (
     <div>
       <header>
+        <SlideShow pictures={ficheLogement.pictures} />
         <img
           className="bannerLogementPage"
           src={ficheLogement.cover}

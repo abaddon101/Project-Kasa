@@ -32,7 +32,7 @@ function About() {
       <BannerComponentAboutPage />
       <ul className="AboutPageContent">
         {collapses.map(({ title, description }) => (
-          <Collapse title={title} description={description} />
+          <Collapse key={title} title={title} description={description} />
         ))}
       </ul>
     </div>
