@@ -23,11 +23,11 @@ function Logement(props) {
     <div>
       <header>
         <SlideShow pictures={ficheLogement.pictures} />
-        <img
+        {/* <img
           className="bannerLogementPage"
           src={ficheLogement.cover}
           alt={ficheLogement.title}
-        />
+        /> */}
       </header>
       <div className="presentationBlocLogement">
         {ficheLogement.title}

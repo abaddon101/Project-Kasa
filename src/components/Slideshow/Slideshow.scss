@@ -1,0 +1,11 @@
+.caroussel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  img {
+    width: 100%;
+    height: 525px;
+    object-fit: cover;
+    
+  }
+}
