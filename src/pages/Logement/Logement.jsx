@@ -1,6 +1,10 @@
 import logements from "../../data/logements.json";
+import Tags from "../../components/Tags/Tags";
 import { useParams } from "react-router-dom";
 import SlideShow from "../../components/Slideshow/Slideshow";
+import styles from "../Logement/Logement.scss";
+import Collapse from "../../components/Collapse/Collapse";
+
 //  import { redirect } from "react-router-dom";
 function Logement(props) {
   /* Get the id */
@@ -17,39 +21,51 @@ function Logement(props) {
   // if (ficheLogement === undefined) {
   //   return <Redirect to="/error" />;
   // }
-  console.log(ficheLogement);
+  // console.log(ficheLogement);
 
   return (
     <div>
-      <header>
+      <section>
         <SlideShow pictures={ficheLogement.pictures} />
-        {/* <img
-          className="bannerLogementPage"
-          src={ficheLogement.cover}
-          alt={ficheLogement.title}
-        /> */}
-      </header>
-      <div className="presentationBlocLogement">
-        {ficheLogement.title}
-        {ficheLogement.location}
-      </div>
-      <div className="presentionHost">
-        {ficheLogement.host.name}
-        <img
-          className="presentionHostpicture"
-          src={ficheLogement.host.picture}
-          alt={ficheLogement.host.picture}
-        />
-      </div>
-      <div className="tag">{ficheLogement.tags}</div>
-      <div className="rating">{ficheLogement.rating}</div>
+      </section>
+      <section className="logementCard">
+        <div className="presentationBlocLogement">
+          <h4 className="logementCardTitle">{ficheLogement.title}</h4>
+          <div className="logementCardLocation">{ficheLogement.location}</div>
+          <Tags tags={ficheLogement.tags} />
+        </div>
+
+        <div className="presentionHost">
+          {ficheLogement.host.name}
+          <img
+            className="presentionHostpicture"
+            src={ficheLogement.host.picture}
+            alt={ficheLogement.host.picture}
+          />
+          <div className="rating">{ficheLogement.rating}</div>
+        </div>
+      </section>
+
       <section className="collapseBLocLogementPage">
-        <article className="collapseBLocLogementPageElement1">
-          {ficheLogement.description}
-        </article>
-        <article className="collapseBLocLogementPageElement2">
-          {ficheLogement.equipments}
-        </article>
+        <Collapse
+          key={ficheLogement.description.title}
+          title="Description"
+          summary="Description"
+          description={ficheLogement.description}
+        >
+          <article className="collapseBLocLogementPageElement1">
+            {ficheLogement.description}
+          </article>
+        </Collapse>
+        <Collapse
+          key={ficheLogement.equipments.title}
+          title="Equipements"
+          description={ficheLogement.equipments}
+        >
+          <article className="collapseBLocLogementPageElement2">
+            {ficheLogement.equipments}
+          </article>
+        </Collapse>
       </section>
     </div>
   );

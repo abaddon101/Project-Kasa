@@ -2,10 +2,39 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
   img {
     width: 100%;
     height: 525px;
     object-fit: cover;
-    
+  }
+
+  .carousselNavBtnPrevious {
+    position: absolute;
+    top: 252px;
+    left: 25px;
+    height: 90px;
+    font-size: 90px;
+    border: 0px;
+    background: none;
+    color: white;
+    :hover {
+      color: #ff6060;
+      transition: 0.5s;
+    }
+  }
+  .carousselNavBtnNext {
+    position: absolute;
+    top: 252px;
+    right: 25px;
+    height: 90px;
+    font-size: 90px;
+    border: 0px;
+    background: none;
+    color: white;
+    :hover {
+      color: #ff6060;
+      transition: 0.5s;
+    }
   }
 }

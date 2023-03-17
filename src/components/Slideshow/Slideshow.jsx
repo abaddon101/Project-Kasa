@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styles from "../Slideshow/Slideshow.scss";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 import Logement from "../../pages/Logement/Logement";
 
@@ -17,6 +18,7 @@ function SlideShow(props) {
   let arrayPropsTotal = arrayProps.length;
   // console.log(arrayPropsTotal);
 
+  //
   function next() {
     setIndexVisibleImg(indexVisibleImg + 1);
     if (indexVisibleImg >= arrayPropsTotal - 1) {
@@ -40,8 +42,12 @@ function SlideShow(props) {
         <img src={props.pictures[indexVisibleImg]} alt="" />
 
         <div className="carousselNavBtn">
-          <button onClick={previous}>PRECEDENT</button>
-          <button onClick={next}>SUIVANT</button>
+          <button className="carousselNavBtnPrevious" onClick={previous}>
+            <MdKeyboardArrowLeft />
+          </button>
+          <button className="carousselNavBtnNext" onClick={next}>
+            <MdKeyboardArrowRight />
+          </button>
         </div>
       </div>
     </div>
