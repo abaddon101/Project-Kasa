@@ -22,17 +22,31 @@
     font-size: 25px;
   }
 }
-
+.identityHost {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+}
 .presentionHost {
   display: flex;
-  flex-direction: column;
-  width: 25%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 65%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.HostName {
+  width: 85px;
 }
 .presentionHostpicture {
-  width: 75px;
-  height: 75px;
+  width: 90px;
+  height: 90px;
   border-radius: 100%;
   object-fit: cover;
+}
+.rating {
+  display: flex;
 }
 .collapseBLocLogementPage {
   display: flex;

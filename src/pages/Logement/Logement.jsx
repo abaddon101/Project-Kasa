@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import SlideShow from "../../components/Slideshow/Slideshow";
 import styles from "../Logement/Logement.scss";
 import Collapse from "../../components/Collapse/Collapse";
+import Rate from "../../components/Rate/Rate";
 
 //  import { redirect } from "react-router-dom";
 function Logement(props) {
@@ -34,15 +35,16 @@ function Logement(props) {
           <h4 className="logementCardLocation">{ficheLogement.location}</h4>
           <Tags tags={ficheLogement.tags} />
         </div>
-
-        <div className="presentionHost">
-          {ficheLogement.host.name}
-          <img
-            className="presentionHostpicture"
-            src={ficheLogement.host.picture}
-            alt={ficheLogement.host.picture}
-          />
-          <div className="rating">{ficheLogement.rating}</div>
+        <div className="identityHost">
+          <div className="presentionHost">
+            <div className="HostName">{ficheLogement.host.name}</div>
+            <img
+              className="presentionHostpicture"
+              src={ficheLogement.host.picture}
+              alt={ficheLogement.host.picture}
+            />
+          </div>
+          <Rate rate={ficheLogement.rating} />
         </div>
       </section>
 
