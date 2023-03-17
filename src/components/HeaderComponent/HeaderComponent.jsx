@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function HeaderComponent() {
   return (
     <header>
-      <img src={logo} alt="logo"></img>
+      <img className="logo" src={logo} alt="logo"></img>
       <nav className="headerMenuNav">
         <Link to="/">Accueil</Link>
         <Link to="/about">A propos</Link>

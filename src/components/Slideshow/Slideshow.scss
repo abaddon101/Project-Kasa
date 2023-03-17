@@ -3,16 +3,19 @@
   flex-direction: column;
   width: 100%;
   position: relative;
+  align-items: center;
+  margin-top: 25px;
   img {
-    width: 100%;
+    width: 90%;
     height: 525px;
     object-fit: cover;
+    border-radius: 25px;
   }
 
   .carousselNavBtnPrevious {
     position: absolute;
     top: 252px;
-    left: 25px;
+    left: 95px;
     height: 90px;
     font-size: 90px;
     border: 0px;
@@ -26,7 +29,7 @@
   .carousselNavBtnNext {
     position: absolute;
     top: 252px;
-    right: 25px;
+    right: 95px;
     height: 90px;
     font-size: 90px;
     border: 0px;

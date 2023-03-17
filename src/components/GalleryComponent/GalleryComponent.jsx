@@ -16,6 +16,7 @@ function GalleryComponent() {
               className="linkArticle"
             >
               <article className="galleryArticle">
+                <div className="shadowImage"></div>
                 <img
                   className="imgGalleryArticle"
                   data={id}

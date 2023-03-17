@@ -30,8 +30,8 @@ function Logement(props) {
       </section>
       <section className="logementCard">
         <div className="presentationBlocLogement">
-          <h4 className="logementCardTitle">{ficheLogement.title}</h4>
-          <div className="logementCardLocation">{ficheLogement.location}</div>
+          <h2 className="logementCardTitle">{ficheLogement.title}</h2>
+          <h4 className="logementCardLocation">{ficheLogement.location}</h4>
           <Tags tags={ficheLogement.tags} />
         </div>
 
@@ -47,25 +47,29 @@ function Logement(props) {
       </section>
 
       <section className="collapseBLocLogementPage">
-        <Collapse
-          key={ficheLogement.description.title}
-          title="Description"
-          summary="Description"
-          description={ficheLogement.description}
-        >
-          <article className="collapseBLocLogementPageElement1">
-            {ficheLogement.description}
-          </article>
-        </Collapse>
-        <Collapse
-          key={ficheLogement.equipments.title}
-          title="Equipements"
-          description={ficheLogement.equipments}
-        >
-          <article className="collapseBLocLogementPageElement2">
-            {ficheLogement.equipments}
-          </article>
-        </Collapse>
+        <ul className="collapseBLocLogementPageElement">
+          <Collapse
+            key={ficheLogement.description}
+            title="Description"
+            description={ficheLogement.description}
+          >
+            <li className="collapseBLocLogementPageElementList">
+              {ficheLogement.description}
+            </li>
+          </Collapse>
+        </ul>
+
+        <ul className="collapseBLocLogementPageElement">
+          <Collapse
+            key={ficheLogement.equipments}
+            title="Equipements"
+            description={ficheLogement.equipments}
+          >
+            <li className="collapseBLocLogementPageElementList">
+              {ficheLogement.equipments}
+            </li>
+          </Collapse>
+        </ul>
       </section>
     </div>
   );
