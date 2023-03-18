@@ -19,10 +19,10 @@ function Logement(props) {
     (logement) => logement.id === idJsonFIle.id
   );
 
-  // if (ficheLogement === undefined) {
-  //   return <Redirect to="/error" />;
-  // }
-  // console.log(ficheLogement);
+  const equipmentLogement = ficheLogement.equipments.map((stuff, index) => {
+    console.log(index);
+    return <li key={index}>{stuff}</li>;
+  });
 
   return (
     <div>
@@ -49,29 +49,21 @@ function Logement(props) {
       </section>
 
       <section className="collapseBLocLogementPage">
-        <ul className="collapseBLocLogementPageElement">
+        <div className="collapseBLocLogementPageElement">
           <Collapse
             key={ficheLogement.description}
             title="Description"
             description={ficheLogement.description}
-          >
-            <li className="collapseBLocLogementPageElementList">
-              {ficheLogement.description}
-            </li>
-          </Collapse>
-        </ul>
+          ></Collapse>
+        </div>
 
-        <ul className="collapseBLocLogementPageElement">
+        <div className="collapseBLocLogementPageElement">
           <Collapse
             key={ficheLogement.equipments}
             title="Equipements"
-            description={ficheLogement.equipments}
-          >
-            <li className="collapseBLocLogementPageElementList">
-              {ficheLogement.equipments}
-            </li>
-          </Collapse>
-        </ul>
+            description={equipmentLogement}
+          ></Collapse>
+        </div>
       </section>
     </div>
   );
