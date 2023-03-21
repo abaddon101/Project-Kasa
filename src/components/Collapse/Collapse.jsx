@@ -8,9 +8,7 @@ function Collapse(props) {
   const toggle = () => {
     setopenElement(!openElement);
   };
-if(props.equipements){
-  alert("ssq")
-}
+
   return (
     <div>
       <div className={openElement ? "element open" : "element"}>
@@ -20,14 +18,13 @@ if(props.equipements){
           <FaAngleDown className="iconTitle" />
         </h5>
 
-        <p className="textDropDown">{props.description}</p>
+        <div className="textDropDown">{props.description}</div>
         
       </div>
 
       {/* <li className="liDropDown">{props.equipments}</li> */}
     </div>
   );
-
 }
 
 export default Collapse;

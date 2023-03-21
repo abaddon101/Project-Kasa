@@ -1,6 +1,6 @@
 import logements from "../../data/logements.json";
 import Tags from "../../components/Tags/Tags";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import SlideShow from "../../components/Slideshow/Slideshow";
 import styles from "../Logement/Logement.scss";
 import Collapse from "../../components/Collapse/Collapse";
@@ -19,10 +19,21 @@ function Logement(props) {
     (logement) => logement.id === idJsonFIle.id
   );
 
+  if (ficheLogement=== undefined){
+    console.log("wololo");
+
+    return (<Navigate to="/error"/>)
+  }
+
+
+
   const equipmentLogement = ficheLogement.equipments.map((stuff, index) => {
     console.log(index);
     return <li key={index}>{stuff}</li>;
   });
+  
+
+  console.log(equipmentLogement);
 
   return (
     <div>
@@ -47,13 +58,16 @@ function Logement(props) {
           <Rate rate={ficheLogement.rating} />
         </div>
       </section>
-
       <section className="collapseBLocLogementPage">
         <div className="collapseBLocLogementPageElement">
           <Collapse
             key={ficheLogement.description}
             title="Description"
-            description={ficheLogement.description}
+            description={
+              <div className="decriptionLogement">
+                {ficheLogement.description}
+              </div>
+            }
           ></Collapse>
         </div>
 
@@ -61,7 +75,7 @@ function Logement(props) {
           <Collapse
             key={ficheLogement.equipments}
             title="Equipements"
-            description={equipmentLogement}
+            description={<ul className="equipmentList">{equipmentLogement}</ul>}
           ></Collapse>
         </div>
       </section>

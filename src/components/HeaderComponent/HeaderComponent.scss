@@ -7,17 +7,21 @@ header {
   width: 90%;
   margin: 1% auto 1% auto;
 }
-.logo {
-  margin-left: 25px;
-}
+// .logo {
+// }
 .headerMenuNav {
-  width: 280px;
+  width: 200px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   a {
     color: #ff6060;
     text-decoration: none;
     font-size: 25px;
+
+  }
+  a:hover  {
+    text-decoration: underline;
   }
 }
+
 

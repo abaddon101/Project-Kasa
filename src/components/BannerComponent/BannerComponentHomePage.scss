@@ -3,8 +3,9 @@
 .banner {
   position: relative;
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: auto;
+  height: 150px;
 }
 .placeTitle {
   color: red;
@@ -13,12 +14,13 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  top: 100px;
+  top: 60px;
+  overflow: clip;
+  direction: ltr;
 }
 
 .bannerImg {
   width: 100%;
-  height: 250px;
   object-fit: cover;
   border-radius: 20px;
   margin-top: 25px;
@@ -31,13 +33,22 @@
 .shadowImageBanner {
   position: absolute;
   width: 100%;
-  height: 100%;
-  border-radius: 15px;
+  height: 85%;
+  border-radius: 20px;
   object-fit: cover;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0),
     rgba(0, 0, 0, 0.5019607843)
   );
+  top: 48px;
   margin: auto;
+}
+
+@media screen and (max-width: 375px) {
+  .placeTitle {
+    width: 80%;
+    left: 15px;
+    top: 40px;
+  }
 }
