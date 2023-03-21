@@ -1,5 +1,5 @@
 .AboutPageContent {
-  margin: auto;
+  margin: 40px auto auto auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,7 +9,6 @@
   height: 100%;
   div {
     width: 100%;
-    margin: 25px 0px 25px 0px;
   }
 }
 .element {
@@ -20,13 +19,16 @@
   width: 100%;
   margin-bottom: 25px;
   border-radius: 5px;
-  
 }
 
 .element.open .textDropDown {
   display: flex;
-  padding-left: 20px;
-
+}
+.descriptionAboutCollapse {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: 25px;
 }
 
 .textDropDown {
@@ -35,14 +37,29 @@
 
 .titleDropdown {
   display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+  justify-content: space-between;
   margin: 0px 0px 0px 0px;
   padding-left: 0px;
-
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   color: #f6f6f6;
   background-color: #ff6060;
   border-radius: 5px;
   height: 50px;
+
+  cursor: pointer;
+  .childTitle {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+}
+.childTitle.open {
+  .iconTitle {
+    rotate: (-180deg);
+  }
 }

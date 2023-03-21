@@ -7,8 +7,10 @@ header {
   width: 90%;
   margin: 1% auto 1% auto;
 }
-// .logo {
-// }
+.logo {
+  min-width: 10%;
+  max-width: 30%;
+}
 .headerMenuNav {
   width: 200px;
   display: flex;
@@ -16,12 +18,18 @@ header {
   a {
     color: #ff6060;
     text-decoration: none;
-    font-size: 25px;
-
+    font-size: 140%;
   }
-  a:hover  {
+  a:hover {
     text-decoration: underline;
   }
 }
 
-
+@media screen and (max-width: 475px) {
+  .headerMenuNav {
+    width: 155px;
+    a {
+      font-size: 100%;
+    }
+  }
+}

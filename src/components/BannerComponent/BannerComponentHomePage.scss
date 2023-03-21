@@ -43,11 +43,22 @@
   );
   top: 48px;
   margin: auto;
+
+
+  
+}
+.shadowImage:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.403),
+    rgba(225, 164, 164, 0.5)
+  );
+  transition: 10ms;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 475px) {
   .placeTitle {
-    width: 80%;
+    width: 60%;
     left: 15px;
     top: 40px;
   }

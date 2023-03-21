@@ -2,18 +2,19 @@
 .gallery {
   border-radius: 15px;
   background-color: #f6f6f6;
-  width: 80%;
+  width: 90%;
   height: 100%;
-
-  margin: auto;
+  margin: 60px auto;
+  display: flex;
 }
 .listGalleryBlock {
   padding-left: 0px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
+  width: 100%;
 }
 .listGalleryChild {
   list-style-type: none;
@@ -55,4 +56,14 @@
     rgba(255, 255, 255, 0),
     rgba(0, 0, 0, 0.5019607843)
   );
+}
+
+@media screen and (max-width: 1030px) {
+  .gallery {
+    background-color: white;
+  }
+  .listGalleryChild {
+    width: 90%;
+    max-height: 300px;
+  }
 }
