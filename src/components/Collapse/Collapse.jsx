@@ -32,7 +32,6 @@ function Collapse(props) {
         <div className="textDropDown">{props.description}</div>
       </div>
 
-      {/* <li className="liDropDown">{props.equipments}</li> */}
     </div>
   );
 }

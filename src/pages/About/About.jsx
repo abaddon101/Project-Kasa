@@ -28,11 +28,17 @@ function About() {
     },
   ];
   return (
-    <div>
+    <div className="AboutPageContent">
       <BannerComponentAboutPage />
-      <div className="AboutPageContent">
+      <div className="collapseSection">
         {collapses.map(({ title, description }) => (
-          <Collapse key={title} title={title} description={<div className="descriptionAboutCollapse">{description}</div>} />
+          <Collapse
+            key={title}
+            title={title}
+            description={
+              <div className="descriptionAboutCollapse">{description}</div>
+            }
+          />
         ))}
       </div>
     </div>

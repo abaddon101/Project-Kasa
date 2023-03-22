@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   width: 90%;
-  margin: auto;
+  margin:  auto 90px;
   height: 150px;
 }
 .placeTitle {
@@ -47,14 +47,7 @@
 
   
 }
-.shadowImage:hover {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.403),
-    rgba(225, 164, 164, 0.5)
-  );
-  transition: 10ms;
-}
+
 
 @media screen and (max-width: 475px) {
   .placeTitle {

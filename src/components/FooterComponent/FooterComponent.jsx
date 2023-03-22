@@ -5,12 +5,14 @@ import logoFooter from "../../assets/logoFooter.png";
 
 function FooterComponent() {
   return (
-    <footer className="footerBlock">
-      <img className="logoFooter" src={logoFooter} alt="logo"></img>
-      <p>
-        <FaRegCopyright />
-        2020 Kasa. All rights reserved
-      </p>
+    <footer id="footerBlock">
+      <div className="footerContent">
+        <img className="logoFooter" src={logoFooter} alt="logo"></img>
+        <p>
+          <FaRegCopyright />
+          2020 Kasa. All rights reserved
+        </p>
+      </div>
     </footer>
   );
 }

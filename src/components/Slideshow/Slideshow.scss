@@ -41,3 +41,25 @@
     }
   }
 }
+
+@media screen and (max-width: 965px) {
+  .caroussel {
+    .carousselNavBtnPrevious {
+      left: 75px;
+    }
+    .carousselNavBtnNext {
+      right: 75px;
+    }
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .caroussel {
+    .carousselNavBtnPrevious {
+      left: 25px;
+    }
+    .carousselNavBtnNext {
+      right: 25px;
+    }
+  }
+}

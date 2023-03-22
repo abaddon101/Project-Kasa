@@ -1,12 +1,21 @@
 /// Footer Component
-.footerBlock {
-  margin-top: 25px;
+#footerBlock {
   background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 250px;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   .logoFooter {
     width: 80px;
+    margin-top: 15px;
   }
   p {
     display: flex;

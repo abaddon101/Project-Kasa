@@ -1,11 +1,16 @@
+.bodyPageAbout{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
 .AboutPageContent {
-  margin: 40px auto auto auto;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-left: 0px;
-  width: 80%;
+  width: 90%;
   height: 100%;
   div {
     width: 100%;

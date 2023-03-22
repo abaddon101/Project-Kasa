@@ -63,21 +63,6 @@
   .collapseBLocLogementPageElementList {
     width: 100%;
   }
-  // .titleDropdown {
-  //   display: flex;
-  //   align-items: center;
-  //   font-size: 20px;
-  //   font-weight: 200;
-  //   justify-content: space-between;
-  //   margin: 0px 0px 0px 0px;
-  //   padding-left: 0px;
-  //   width: 100%;
-  //   color: #f6f6f6;
-  //   background-color: #ff6060;
-  //   border-radius: 5px;
-  //   height: 50px;
-
-  // }
 }
 .decriptionLogement {
   display: flex;
@@ -88,6 +73,32 @@
 .equipmentList {
   height: 100%;
   width: 100%;
+  list-style-type: none;
 }
 
+@media screen and (max-width: 800px) {
+  .logementCard {
+    width: 100%;
+    flex-direction: column;
+  }
+  .presentationBlocLogement {
+    width: 90%;
+    margin: auto;
+  }
+  .identityHost {
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .presentionHost {
+    width: 35%;
+  }
+  .rate {
+    order: -1;
+  }
 
+  .collapseBLocLogementPage {
+    flex-direction: column;
+    gap: 0;
+  }
+}
