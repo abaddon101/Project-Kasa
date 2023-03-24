@@ -2,27 +2,19 @@ import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 
 function Collapse(props) {
-  console.log(props);
+  // console.log(props);
 
-  const [openElement, setopenElement] = useState(false);
+  const [activeElement, setActiveElement] = useState(false);
+
   const toggle = () => {
-    setopenElement(!openElement);
+    setActiveElement(!activeElement);
   };
-  const [turnTheArrow, setTurnTheArrow] = useState(false);
-  const onClickArrow = () => {
-    setTurnTheArrow(!turnTheArrow);
-  };
-
-  console.log(turnTheArrow);
 
   return (
     <div>
-      <div className={openElement ? "element open" : "element"}>
+      <div className={activeElement ? "element open" : "element"}>
         <h5 className="titleDropdown" onClick={toggle}>
-          <div
-            className={turnTheArrow ? "childTitle open" : "childTitle"}
-            onClick={onClickArrow}
-          >
+          <div className={activeElement ? "childTitle open" : "childTitle"}>
             {props.title}
 
             <FaAngleDown className="iconTitle" />
@@ -31,7 +23,6 @@ function Collapse(props) {
 
         <div className="textDropDown">{props.description}</div>
       </div>
-
     </div>
   );
 }

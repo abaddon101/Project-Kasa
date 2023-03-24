@@ -5,7 +5,7 @@ import { FaAngleDown } from "react-icons/fa";
 import styles from "../About/About.scss";
 
 function About() {
-  const collapses = [
+  const informations = [
     {
       title: "Fiabilité",
       description:
@@ -31,7 +31,7 @@ function About() {
     <div className="AboutPageContent">
       <BannerComponentAboutPage />
       <div className="collapseSection">
-        {collapses.map(({ title, description }) => (
+        {informations.map(({ title, description }) => (
           <Collapse
             key={title}
             title={title}

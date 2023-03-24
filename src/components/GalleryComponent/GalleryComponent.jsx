@@ -19,7 +19,7 @@ function GalleryComponent() {
                 <div className="shadowImage"></div>
                 <img
                   className="imgGalleryArticle"
-                  data={id}
+                  // data={id}
                   src={cover}
                   alt={title}
                 />

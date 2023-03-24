@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   width: 90%;
-  margin:  auto 90px;
+  margin: auto;
   height: 150px;
 }
 .placeTitle {
@@ -43,11 +43,7 @@
   );
   top: 48px;
   margin: auto;
-
-
-  
 }
-
 
 @media screen and (max-width: 475px) {
   .placeTitle {
