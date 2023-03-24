@@ -1,4 +1,3 @@
-// import { Router } from "react-router-dom";
 import styles from "./Error.scss";
 import { Link } from "react-router-dom";
 

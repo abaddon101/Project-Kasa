@@ -1,8 +1,6 @@
-import logements from "../../data/logements.json";
 import styles from "../GalleryComponent/GalleryComponent.scss";
+import logements from "../../data/logements.json";
 import { Link } from "react-router-dom";
-
-// add event onclick send the show the id
 
 function GalleryComponent() {
   return (

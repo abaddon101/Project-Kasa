@@ -6,32 +6,21 @@ import styles from "../Logement/Logement.scss";
 import Collapse from "../../components/Collapse/Collapse";
 import Rate from "../../components/Rate/Rate";
 
-//  import { redirect } from "react-router-dom";
 function Logement() {
   /* Get the id */
-  // console.log(props);
   const idJsonFIle = useParams();
-
-  // console.log(idJsonFIle);
   // make a find on the logement (jsonFile) // the (logement) param give the list of all the logements
   // the logement.id allow to send on the first id array of ths json file, but its necessary to allow to all
   // the file with : idJsonFIle.id
   const ficheLogement = logements.find(
     (logement) => logement.id === idJsonFIle.id
   );
-
   if (ficheLogement === undefined) {
-    // console.log("wololo");
-
     return <Navigate to="/error" />;
   }
-
   const equipmentLogement = ficheLogement.equipments.map((stuff, index) => {
-    // console.log(index);
     return <li key={index}>{stuff}</li>;
   });
-
-  // console.log(equipmentLogement);
 
   return (
     <div>
@@ -68,7 +57,6 @@ function Logement() {
             }
           ></Collapse>
         </div>
-
         <div className="collapseBLocLogementPageElement">
           <Collapse
             key={ficheLogement.equipments}

@@ -1,4 +1,5 @@
 import styles from "../Tags/Tags.scss";
+
 function Tags({ tags }) {
   return (
     <ul className="logementCardTagWrapper">
